@@ -13,6 +13,7 @@ export const env = createEnv({
         : z.string().optional(),
     SPOTIFY_CLIENT_ID: z.string(),
     SPOTIFY_CLIENT_SECRET: z.string(),
+    SPOTIFY_REDIRECT_URI: z.string().url(),
     DATABASE_URL: z.string().url(),
     NODE_ENV: z
       .enum(["development", "test", "production"])
@@ -36,6 +37,7 @@ export const env = createEnv({
     AUTH_SECRET: process.env.AUTH_SECRET,
     SPOTIFY_CLIENT_ID: process.env.SPOTIFY_CLIENT_ID,
     SPOTIFY_CLIENT_SECRET: process.env.SPOTIFY_CLIENT_SECRET,
+    SPOTIFY_REDIRECT_URI: process.env.SPOTIFY_REDIRECT_URI,
     DATABASE_URL: process.env.DATABASE_URL,
     NODE_ENV: process.env.NODE_ENV,
   },
